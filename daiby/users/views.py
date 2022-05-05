@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def users(request):
-    return render(request, 'users/users.html')
+def profiles(request):
+    return render(request, 'users/profiles.html')
 
-def user(request, pk):
-    return render(request, 'users/user.html')
+def profile(request, pk):
+    return render(request, 'users/profile.html')
