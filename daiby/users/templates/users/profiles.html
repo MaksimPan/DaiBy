@@ -4,4 +4,19 @@
 
     <h1>This is a page for all users!</h1>
 
+    
+
+    {% for profile in profiles %}
+
+        <ul>
+            <li><a href="{% url 'profile' profile.id %}">{{profile.nickname}}</a></li>
+            {% load static %}
+            <img src="{% static 'users/' %}{{profile.profile_image}}" alt="My image">
+
+        </ul>
+    
+        
+
+    {% endfor %}
+
 {% endblock content %}

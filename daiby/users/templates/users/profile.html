@@ -2,6 +2,15 @@
 
 {% block content %}
 
-    <h1>This is a page for one user!</h1>
+    <h1>This is a page for {{profile.nickname}} user!</h1>
+
+    {% load static %}
+    <img src="{% static 'users/' %}{{profile.profile_image}}" alt="My image">
+    <br>
+    {{profile.first_name}} {{profile.last_name}}
+    <br>
+    {{profile.location}}
+    <br>
+    {{profile.bio}}
 
 {% endblock content %}
